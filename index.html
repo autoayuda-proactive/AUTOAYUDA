@@ -40,7 +40,7 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Navbar Header */
+        /* Navbar Header con Logo */
         .navbar {
             background: var(--dark-bg);
             padding: 12px 28px;
@@ -57,20 +57,25 @@
             gap: 20px;
         }
 
-        .logo-text {
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 20px;
-            letter-spacing: 0.5px;
+        .logo-banner-box {
+            background: #FFFFFF;
+            padding: 4px 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         }
 
-        .logo-text span {
-            color: var(--valtek-red);
+        .logo-banner-box img {
+            height: 58px;
+            width: auto;
+            display: block;
+            object-fit: contain;
         }
 
         .divider {
             width: 1px;
-            height: 28px;
+            height: 48px;
             background: #334155;
         }
 
@@ -398,7 +403,9 @@
     <!-- Navbar Header -->
     <header class="navbar">
         <div class="brand-header">
-            <div class="logo-text">VALTEK <span>INFORMÁTICA MÉDICA</span></div>
+            <div class="logo-banner-box">
+                <img src="logo.png" alt="Valtek Informática Médica">
+            </div>
             <div class="divider"></div>
             <span class="badge-portal">Autoayuda ProActiveLIS</span>
         </div>
@@ -415,21 +422,18 @@
         <div class="areas-nav-title">Módulos Principales de Capacitación:</div>
         <div class="areas-grid-tabs">
             
-            <!-- Módulo 1 -->
             <div class="area-tab-card active" onclick="switchArea('area1', this)">
                 <span class="area-number-badge">Módulos de Soporte • Área 01</span>
                 <h2 class="area-tab-title">Pruebas & Prestaciones</h2>
                 <span class="area-tab-count">7 Cápsulas y Guías disponibles</span>
             </div>
 
-            <!-- Módulo 2 -->
             <div class="area-tab-card" onclick="switchArea('area2', this)">
                 <span class="area-number-badge">Módulos de Soporte • Área 02</span>
                 <h2 class="area-tab-title">Gestión de Usuarios</h2>
                 <span class="area-tab-count">1 Cápsula y Guía disponible</span>
             </div>
 
-            <!-- Módulo 3 -->
             <div class="area-tab-card" onclick="switchArea('area3', this)">
                 <span class="area-number-badge">Módulos de Soporte • Área 03</span>
                 <h2 class="area-tab-title">Etiquetadoras Zebra</h2>
@@ -444,7 +448,7 @@
         
         <!-- AREA 1: PRUEBAS Y PRESTACIONES -->
         <div id="area1" class="cards-grid area-panel active">
-            <!-- Tema 1 -->
+            <!-- 1 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 01 • CONFIGURACIÓN</span>
@@ -452,12 +456,12 @@
                     <p class="card-desc">Dos caminos para dar de alta un examen en ProActiveLIS (mantenedor general o directo en prestación). Ajuste de respuestas y fórmulas.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Cómo crear una prueba en el sistema', 'Creacion de prestacion/creacion de prestaciones/1.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/1.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Cómo crear una prueba en el sistema', 'prestaciones/1_crear_una_prueba/1_crear_una_prueba.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/1_crear_una_prueba/1_crear_una_prueba.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 2 -->
+            <!-- 2 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 02 • PRESTACIONES</span>
@@ -465,12 +469,12 @@
                     <p class="card-desc">Crea una prestación y vincúlale un único examen. Asignación obligatoria de tipo de muestra, contenedor y lugar de extracción.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Configuración de prestación simple', 'Creacion de prestacion/creacion de prestaciones/2.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/2.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Configuración de prestación simple', 'prestaciones/2_crear_prestacion_con_una_prueba/2_crear_prestacion_con_una_prueba.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/2_crear_prestacion_con_una_prueba/2_crear_prestacion_con_una_prueba.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 3 -->
+            <!-- 3 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 03 • PERFILES</span>
@@ -478,12 +482,12 @@
                     <p class="card-desc">Agrupa múltiples análisis bajo un mismo perfil (ej. Perfil Tiroideo). Asignación masiva de muestras y tubos en un solo paso.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Prestaciones compuestas o perfiles', 'Creacion de prestacion/creacion de prestaciones/3.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/3.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Prestaciones compuestas o perfiles', 'prestaciones/3_crear_prestacion_con_multiples_pruebas/3_crear_prestacion_con_multiples_pruebas.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/3_crear_prestacion_con_multiples_pruebas/3_crear_prestacion_con_multiples_pruebas.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 4 -->
+            <!-- 4 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 04 • VALORES BIOLÓGICOS</span>
@@ -491,12 +495,12 @@
                     <p class="card-desc">Aprende a configurar límites de normalidad por edad, sexo y tipo de muestra, evitando la superposición de edades biológicas.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Añadir rangos de referencia a una prueba', 'Creacion de prestacion/creacion de prestaciones/4.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/4.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Añadir rangos de referencia a una prueba', 'prestaciones/4_como_crear_añadir_valores_de_referencia/4_como_crear_añadir_valores_de_referencia.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/4_como_crear_añadir_valores_de_referencia/4_como_crear_añadir_valores_de_referencia.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 5 -->
+            <!-- 5 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 05 • FORMATOS</span>
@@ -504,12 +508,12 @@
                     <p class="card-desc">Ajuste del número de decimales visibles en los resultados de una prueba dentro de una prestación específica, sin alterar su comportamiento global.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Añadir decimales a una prueba específica', 'Creacion de prestacion/creacion de prestaciones/5.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/5.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Añadir decimales a una prueba específica', 'prestaciones/5_añadir_decimales_a_una_prueba/5_añadir_decimales_a_una_prueba.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/5_añadir_decimales_a_una_prueba/5_añadir_decimales_a_una_prueba.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 6 -->
+            <!-- 6 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 06 • CÁLCULOS</span>
@@ -517,12 +521,12 @@
                     <p class="card-desc">Creación de cálculos automáticos asociando alias de otras pruebas (ej. [HTO], [EJ]). Uso de metalenguaje y sintaxis de ecuaciones del laboratorio.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Configuración de pruebas tipo Fórmula', 'Creacion de prestacion/creacion de prestaciones/6.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/6.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Configuración de pruebas tipo Fórmula', 'prestaciones/6_configurar_formula_simple/6_configurar_formula_simple.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/6_configurar_formula_simple/6_configurar_formula_simple.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 7 -->
+            <!-- 7 -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 07 • MANTENIMIENTO</span>
@@ -530,15 +534,14 @@
                     <p class="card-desc">Modificación de rangos biológicos y valores críticos en pruebas existentes. Requiere reinicio del sistema ProActiveLIS para aplicar cambios.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Editar y actualizar valores de referencia', 'Creacion de prestacion/creacion de prestaciones/7.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de prestacion/creacion de prestaciones/7.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Editar y actualizar valores de referencia', 'prestaciones/7_modificar_valores_de_referencia/7_modificar_valores_de_referencia.mp4')">▶ Ver Video</button>
+                    <a href="prestaciones/7_modificar_valores_de_referencia/7_modificar_valores_de_referencia.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
         </div>
 
         <!-- AREA 2: GESTIÓN DE USUARIOS -->
         <div id="area2" class="cards-grid area-panel">
-            <!-- Tema 1 usuarios -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 01 • ACCESOS Y PERMISOS</span>
@@ -546,15 +549,15 @@
                     <p class="card-desc">Alta de nuevos funcionarios tomando un usuario existente como referencia. Configuración de credenciales, Perfil (Flebotomista, Validador, Web) y PIN.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Cómo crear un usuario en el sistema', 'Creacion de usuarios/1.mp4')">▶ Ver Video</button>
-                    <a href="Creacion de usuarios/1.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Cómo crear un usuario en el sistema', 'usuarios/1_creacion_de_usuario_final.mp4')">▶ Ver Video</button>
+                    <a href="usuarios/1_creacion_de_usuario_final.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
         </div>
 
         <!-- AREA 3: ETIQUETADORAS ZEBRA -->
         <div id="area3" class="cards-grid area-panel">
-            <!-- Tema 1 Zebra -->
+            <!-- 1 Zebra -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 01 • CONFIGURACIÓN</span>
@@ -562,12 +565,12 @@
                     <p class="card-desc">Procedimiento paso a paso desde el menú de Ajustes para ajustar la posición, detectar el tamaño de la etiqueta y calibrar la densidad de impresión.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Calibrar la impresora de etiquetas Zebra', 'Impresoras zebra/1.mp4')">▶ Ver Video</button>
-                    <a href="Impresoras zebra/1.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Calibrar la impresora de etiquetas Zebra', 'zebra/1_calibracion_impresora_zebra/1_calibracion_impresora_zebra.mp4')">▶ Ver Video</button>
+                    <a href="zebra/1_calibracion_impresora_zebra/1_calibracion_impresora_zebra.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 2 Zebra -->
+            <!-- 2 Zebra -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 02 • INSTALACIÓN</span>
@@ -575,12 +578,12 @@
                     <p class="card-desc">Guía para conectar e instalar manualmente los controladores de Windows directamente desde la página oficial de Zebra en puerto USB.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Instalación de drivers para impresora Zebra', 'Impresoras zebra/2.mp4')">▶ Ver Video</button>
-                    <a href="Impresoras zebra/2.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Instalación de drivers para impresora Zebra', 'zebra/2_instalacion_drivers_impresora_zebra/2_instalacion_drivers_impresora_zebra.mp4')">▶ Ver Video</button>
+                    <a href="zebra/2_instalacion_drivers_impresora_zebra/2_instalacion_drivers_impresora_zebra.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 3 Zebra -->
+            <!-- 3 Zebra -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 03 • VINCULACIÓN</span>
@@ -588,12 +591,12 @@
                     <p class="card-desc">Cómo copiar el nombre exacto del dispositivo desde Windows y vincularlo en el archivo de configuración .ini de ProActiveLIS para su activación.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Instalación Plug and Play y archivo .ini', 'Impresoras zebra/3.mp4')">▶ Ver Video</button>
-                    <a href="Impresoras zebra/3.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Instalación Plug and Play y archivo .ini', 'zebra/3_instalacion_impresora_zebra_plug_and_play/3_instalacion_impresora_zebra_plug_and_play.mp4')">▶ Ver Video</button>
+                    <a href="zebra/3_instalacion_impresora_zebra_plug_and_play/3_instalacion_impresora_zebra_plug_and_play.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
 
-            <!-- Tema 4 Zebra -->
+            <!-- 4 Zebra -->
             <div class="card">
                 <div>
                     <span class="card-tag">TEMA 04 • MANTENIMIENTO</span>
@@ -601,8 +604,8 @@
                     <p class="card-desc">Pasos prácticos para abrir el equipo, ajustar la guía de ancho de rollo y realizar la limpieza del cabezal térmico y rodillo impulsor.</p>
                 </div>
                 <div class="card-actions">
-                    <button class="btn-video" onclick="openLocalVideo('Revisión física y limpieza de la impresora Zebra', 'Impresoras zebra/4.mp4')">▶ Ver Video</button>
-                    <a href="Impresoras zebra/4.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
+                    <button class="btn-video" onclick="openLocalVideo('Revisión física y limpieza de la impresora Zebra', 'zebra/4_revision_fisica_de_impresora/4_revision_fisica_de_impresora.mp4')">▶ Ver Video</button>
+                    <a href="zebra/4_revision_fisica_de_impresora/4_revision_fisica_de_impresora.pdf" target="_blank" class="btn-pdf">📄 Guía PDF</a>
                 </div>
             </div>
         </div>
