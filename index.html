@@ -40,10 +40,10 @@
             border: 1px solid var(--border-color);
         }
 
-        /* Navbar Header con Logo */
+        /* Navbar Header */
         .navbar {
             background: var(--dark-bg);
-            padding: 12px 28px;
+            padding: 16px 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -59,7 +59,7 @@
 
         .logo-banner-box {
             background: #FFFFFF;
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -67,7 +67,7 @@
         }
 
         .logo-banner-box img {
-            height: 120px;
+            height: 80px;
             width: auto;
             display: block;
             object-fit: contain;
@@ -75,7 +75,7 @@
 
         .divider {
             width: 1px;
-            height: 48px;
+            height: 65px;
             background: #334155;
         }
 
@@ -209,7 +209,7 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 20px;
         }
 
@@ -279,7 +279,7 @@
             background: var(--valtek-red);
             color: #ffffff;
             border: none;
-            padding: 9px 12px;
+            padding: 10px 12px;
             font-size: 12px;
             font-weight: 700;
             border-radius: 6px;
@@ -298,7 +298,7 @@
             background: #ffffff;
             color: var(--text-main);
             border: 1px solid var(--border-color);
-            padding: 9px 12px;
+            padding: 10px 12px;
             font-size: 12px;
             font-weight: 700;
             border-radius: 6px;
@@ -324,7 +324,7 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
         }
 
         .modal-overlay.active {
@@ -344,14 +344,14 @@
         .modal-header {
             background: var(--dark-bg);
             color: #ffffff;
-            padding: 16px 20px;
+            padding: 14px 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .modal-title {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
         }
 
@@ -394,6 +394,79 @@
 
         .footer strong {
             color: #ffffff;
+        }
+
+        /* ==========================================
+           REGLAS RESPONSIVAS PARA MÓVILES Y TABLETS
+           ========================================== */
+        @media (max-width: 768px) {
+            body {
+                padding: 8px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px 16px;
+                text-align: center;
+            }
+
+            .brand-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .logo-banner-box img {
+                height: 55px; /* Reducción ligera para caber en móvil */
+            }
+
+            .divider {
+                display: none; /* Ocultamos el divisor vertical en móvil */
+            }
+
+            .hero {
+                padding: 18px 16px;
+            }
+
+            .hero-title {
+                font-size: 20px;
+            }
+
+            .hero-sub {
+                font-size: 12.5px;
+            }
+
+            .areas-nav-section {
+                padding: 16px 12px;
+            }
+
+            .areas-grid-tabs {
+                grid-template-columns: 1fr; /* Pasa de 3 columnas a 1 sola columna en vertical */
+                gap: 10px;
+            }
+
+            .area-tab-card {
+                padding: 14px 12px;
+            }
+
+            .content-body {
+                padding: 16px 12px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr; /* 1 columna por fila para las tarjetas de cursos */
+                gap: 14px;
+            }
+
+            .card-actions {
+                flex-direction: column; /* Los botones se ponen uno encima del otro para presionar fácil */
+                gap: 8px;
+            }
+
+            .footer {
+                padding: 14px 16px;
+                font-size: 11px;
+            }
         }
     </style>
 </head>
